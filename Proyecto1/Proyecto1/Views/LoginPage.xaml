@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Proyecto1.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="Control de Casas" FontSize="40" FontAttributes="Bold" TextColor="White" Margin="0, 30" />
+                <Label Text="Login" FontSize="20" FontAttributes="Bold" TextColor="White" Margin="0, 20" HorizontalOptions="Center" />
+            </StackLayout>
+            <StackLayout Margin="30, 0">
+                <Frame CornerRadius="10" Padding="10, 0, 0, 0" BackgroundColor="#F7F7F7">
+                    <Entry Placeholder="Nombre de usuario"
+                           x:Name="Username"
+                           Keyboard="Text" 
+                           FontSize="16" 
+                           TextColor="#333" 
+                           PlaceholderColor="#333"
+                           TextChanged="Username_TextChanged"
+                           BackgroundColor="#F7F7F7"  />
+                </Frame>
+
+                <Frame CornerRadius="10" Padding="10, 0, 0, 0" BackgroundColor="#F7F7F7">
+                    <Entry Placeholder="Contra"
+                           x:Name="Password"
+                           IsPassword="True"
+                           FontSize="16"
+                           TextColor="#333" 
+                           PlaceholderColor="#333"
+                           BackgroundColor="#F7F7F7" />
+                </Frame>
+
+                <Button Text="Login"
+                        TextColor="#FFF"
+                        x:Name="LoginBtn"
+                        BackgroundColor="#007ACC"
+                        FontSize="18"
+                        CornerRadius="10"
+                        Margin="0, 20"
+                        HeightRequest="50"
+                        Clicked="LoginBtn_Clicked" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 40">
+                    <Label Text="No tienes cuenta?" />
+                    <Label Text="Registrate aqui" TextColor="#55aaff">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                            x:Name="Registrar"
+                            Tapped="Registrar_Tapped"
+                            NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="Salir de la App"
+                    x:Name="SalirBtn"
+                    Clicked="SalirBtn_Clicked"
+                    Margin="30, 0"
+                    BackgroundColor="#FE5252"
+                    CornerRadius="10"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto1.Views.Register">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registrar" FontSize="30" FontAttributes="Bold" TextColor="White" Margin="0, 20" HorizontalOptions="Center" />
+            <Entry Placeholder="Nombre de usuario"
+                   x:Name="Username"
+                   Keyboard="Text" 
+                   FontSize="16" 
+                   TextColor="#333" 
+                   PlaceholderColor="#333" 
+                   BackgroundColor="#F7F7F7"  />
+
+            <Entry Placeholder="Contra"
+                   x:Name="Password"
+                   IsPassword="True"
+                   FontSize="16"
+                   TextColor="#333" 
+                   PlaceholderColor="#333" 
+                   BackgroundColor="#F7F7F7" />
+
+            <Entry Placeholder="Confirme su Contra"
+                   x:Name="Password_Confirmacion"
+                   IsPassword="True"
+                   FontSize="16"
+                   TextColor="#333" 
+                   PlaceholderColor="#333" 
+                   BackgroundColor="#F7F7F7" />
+
+            <Button Text="Registrar"
+                    TextColor="#FFF"
+                    x:Name="RegisterBtn"
+                    BackgroundColor="#007ACC"
+                    FontSize="18"
+                    HeightRequest="50"
+                    Clicked="RegisterBtn_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

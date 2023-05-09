@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto1.Views.EditarLugar">
+    <ContentPage.Content>
+        <StackLayout Margin="20,5,20,0">
+            <Label Text="Editar Casa" FontSize="Large" HorizontalOptions="Center" Margin="0,20" />
+            <Label Text="Longitud"/>
+            <Entry x:Name="Longitud" />
+            <Label Text="Latitud"/>
+            <Entry x:Name="Latitud" />
+            <Label Text="Descripcion"/>
+            <Entry x:Name="Descripcion" />
+            <Label Text="Direccion"/>
+            <Entry x:Name="Direccion" />
+            <Button Text="Editar" 
+                    x:Name="SaveBtn" 
+                    Margin="20,20,20,0" 
+                    Clicked="SaveBtn_Clicked" 
+                    BackgroundColor="#33BD4F"
+                    CornerRadius="10" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

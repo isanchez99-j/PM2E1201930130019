@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto1.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <Frame BackgroundColor="#00D196" Padding="20" CornerRadius="0">
+            <Label Text="PMII - 201930130019 - 1er Ejercicio" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+        </Frame>
+        
+        <Label x:Name="Username" HorizontalOptions="Center" FontAttributes="Bold" FontSize="18" />
+
+        <Label Text="Latitud"/>
+        <Entry x:Name="txtLat" IsReadOnly="true" TextTransform="None"/>
+        <Label Text="Longitud"/>
+        <Entry x:Name="txtLon" IsReadOnly="true" TextTransform="None"/>
+        <Label Text="Descripcion"/>
+        <Entry x:Name="txtDescripcion"/>
+        <Label Text="Direccion"/>
+        <Entry x:Name="txtDireccion" />
+
+        <Image x:Name="fotoSitio" HorizontalOptions="Center" HeightRequest="150" WidthRequest="150" Aspect="AspectFit" VerticalOptions="FillAndExpand" Source="usuario1.png" Margin="5"/>
+
+        <Button Text="Tomar Foto"
+                x:Name="btnFoto"
+                Clicked="btnFoto_Clicked" 
+                BackgroundColor="#00D196"
+                CornerRadius="10" 
+                Margin="50,10,50,10"/>
+
+        <FlexLayout>
+            <Button Text="Listar Sitios" 
+                    x:Name="btnList" 
+                    Clicked="btnList_Clicked" 
+                    BackgroundColor="#FFE400"
+                    TextColor="Black"
+                    CornerRadius="10" 
+                    Margin="45,10,40,0" 
+            />
+            <Button Text="Agregar" 
+                    x:Name="btnAdd" 
+                    Clicked="btnAdd_Clicked" 
+                    BackgroundColor="#00D196"
+                    CornerRadius="10" 
+                    Margin="50,10,50,1"
+                    HeightRequest="60"
+            />            
+        </FlexLayout>
+
+        <Button Text="Salir" 
+                x:Name="btnSalir" 
+                Clicked="btnSalir_Clicked" 
+                BackgroundColor="#FF5733"
+                CornerRadius="10" 
+                Margin="50,20"
+        />        
+    </StackLayout>
+</ContentPage>
